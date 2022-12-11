@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.GuestFormActivity">
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Formulário de Convidados"
+        android:textAlignment="center"
+        android:textColor="@color/Blue_purple"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_name_icon"
+        android:drawablePadding="12dp"
+        android:elevation="2.5dp"
+        android:fontFamily="@font/montserrat"
+        android:hint="nome"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="inherit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_name" />
+
+    <TextView
+        android:id="@+id/text_present"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Confirmar presença"
+        android:textColor="@color/Blue_purple"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_name" />
+
+    <TextView
+        android:id="@+id/mandatory_present"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/montserrat"
+        android:text="*"
+        android:layout_marginStart="1.5dp"
+        android:textColor="@color/Red2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/text_present"
+        app:layout_constraintTop_toBottomOf="@id/edit_name" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_present">
+
+        <RadioButton
+            android:id="@+id/radio_present"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Presente"
+            android:textColor="@color/Gray"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_present"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <RadioButton
+            android:id="@+id/radio_absent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Ausente"
+            android:textColor="@color/Gray"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_present" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/Blue_purple"
+        android:background="@drawable/custom_button"
+        android:elevation="10dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Salvar"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
