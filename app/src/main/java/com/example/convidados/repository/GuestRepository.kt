@@ -1,8 +1,8 @@
 package com.example.convidados.repository
 
-class GuestRepository private constructor(){
+class GuestRepository private constructor(){ // criando repositório para salvar os dados
 
-    //Singleton
+    //Singleton - padrão de projeto para lidar com os dados
     companion object{
         private lateinit var repository: GuestRepository
 
@@ -12,6 +12,11 @@ class GuestRepository private constructor(){
             }
             return repository
         }
+    }
+
+    fun save() {
+        GuestDataBase(null)
+
     }
 
 }
